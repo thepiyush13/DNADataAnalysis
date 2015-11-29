@@ -1,0 +1,195 @@
+COMMAND#  biom summarize-table -i ../input/otu_table_combined_mc2_w_tax.biom  -o output/otu_table_combined_mc2_w_tax.biom.summary          ON#$(date)
+RESULT#  
+Num samples: 78
+Num observations: 9946
+Total count: 2770881
+Table density (fraction of non-zero values): 0.094
+Table md5 (unzipped): 875b7312e85991fe9b202f88b956e744
+
+Counts/sample summary:
+ Min: 494.0
+ Max: 119954.0
+ Median: 39159.000
+ Mean: 35524.115
+ Std. dev.: 26502.177
+ Sample Metadata Categories: None provided
+ Observation Metadata Categories: taxonomy
+
+Counts/sample detail:
+ ST10d: 494.0
+ ST11d: 586.0
+ ST13d: 861.0
+ ST8d: 1029.0
+ ST12d: 1066.0
+ ST9d: 1083.0
+ ST6d: 1746.0
+ ST5d: 3065.0
+ ST7d: 3764.0
+ 17.T0: 3772.0
+ ST16d: 4646.0
+ ST17d: 4743.0
+ ST1d: 5039.0
+ ST10i: 5236.0
+ ST4d: 5260.0
+ ST2d: 5883.0
+ 18.T0: 6292.0
+ ST14d: 6757.0
+ ST3d: 7535.0
+ ST15d: 7747.0
+ ST5i: 8104.0
+ ST18d: 8252.0
+ ST12i: 8551.0
+ ST11i: 14563.0
+ ST19d: 15434.0
+ ST3i: 19029.0
+ ST7i: 20367.0
+ ST2i: 22987.0
+ 13.T30: 23328.0
+ ST1i: 23802.0
+ ST6i: 28342.0
+ 5.T30: 28419.0
+ 1.T0: 31237.0
+ ST8i: 32352.0
+ 14.T30: 35106.0
+ ST16i: 36043.0
+ 11.T0: 36391.0
+ 17.T30: 37638.0
+ ST9i: 37878.0
+ 2.T0: 40440.0
+ ST15i: 41482.0
+ 15.T30: 41573.0
+ 16.T30: 42347.0
+ 8.T30: 43130.0
+ 16.T0: 43255.0
+ 13.T0: 43463.0
+ 19.T30: 43810.0
+ 9.T0: 45664.0
+ 4.T0: 46348.0
+ 7.T0: 46367.0
+ 18.T30: 46454.0
+ 10.T0: 46887.0
+ 7.T30: 46976.0
+ 5.T0: 48182.0
+ 11.T30: 48407.0
+ 9.T30: 49023.0
+ 2.T30: 50982.0
+ 3.T0: 51010.0
+ ST18i: 51856.0
+ 6.T0: 52114.0
+ 4.T30: 53579.0
+ 14.T0: 53841.0
+ 10.T30: 53882.0
+ 15.T0: 55563.0
+ 6.T30: 57503.0
+ 12.T0: 57542.0
+ 8.T0: 58100.0
+ 3.T30: 58109.0
+ 1.T30: 60305.0
+ 20.T30: 62336.0
+ 20.T0: 62769.0
+ 19.T0: 66737.0
+ 12.T30: 67735.0
+ ST19i: 78664.0
+ ST13i: 92222.0
+ ST4i: 92909.0
+ ST14i: 104934.0
+ ST17i: 119954.0
+COMMAND#filter_samples_from_otu_table.py -i ../input/otu_table_combined_mc2_w_tax.biom -o output/otu_table_sivoy2.biom -m ../input/map.txt -s "Project:stoica" --output_mapping_fp otu_table_stoica_mapping.biom   
+cp ../filter_samples_from_otu_table/output/otu_table_sivoy2.biom input/
+cp ../filter_samples_from_otu_table/otu_table_stoica_mapping.biom input/
+CREATED NEW PROJECT Project_stoica
+COMMAND#biom summarize-table -i ../input/otu_table_stoica.biom  -o output/otu_table_stoica.biom.summary        
+Num samples: 38
+Num observations: 9946
+Total count: 924265
+Table density (fraction of non-zero values): 0.047
+Table md5 (unzipped): 63a092cacc344bc0e56aabad0c566024
+
+Counts/sample summary:
+ Min: 494.0
+ Max: 119954.0
+ Median: 8178.000
+ Mean: 24322.763
+ Std. dev.: 31672.648
+ Sample Metadata Categories: None provided
+ Observation Metadata Categories: taxonomy
+
+Counts/sample detail:
+ ST10d: 494.0
+ ST11d: 586.0
+ ST13d: 861.0
+ ST8d: 1029.0
+ ST12d: 1066.0
+ ST9d: 1083.0
+ ST6d: 1746.0
+ ST5d: 3065.0
+ ST7d: 3764.0
+ ST16d: 4646.0
+ ST17d: 4743.0
+ ST1d: 5039.0
+ ST10i: 5236.0
+ ST4d: 5260.0
+ ST2d: 5883.0
+ ST14d: 6757.0
+ ST3d: 7535.0
+ ST15d: 7747.0
+ ST5i: 8104.0
+ ST18d: 8252.0
+ ST12i: 8551.0
+ ST11i: 14563.0
+ ST19d: 15434.0
+ ST3i: 19029.0
+ ST7i: 20367.0
+ ST2i: 22987.0
+ ST1i: 23802.0
+ ST6i: 28342.0
+ ST8i: 32352.0
+ ST16i: 36043.0
+ ST9i: 37878.0
+ ST15i: 41482.0
+ ST18i: 51856.0
+ ST19i: 78664.0
+ ST13i: 92222.0
+ ST4i: 92909.0
+ ST14i: 104934.0
+ ST17i: 119954.0
+
+
+#ALPHA AND BETA DIVERSITY WITHOUT RARFYING THE STOICA BIOM FILE 
+alpha_rarefaction.py -i ../input/otu_table_stoica.biom -o output/  -f -m
+../input/otu_stoica_mapping.txt -p  alpha_params.txt -t /data/piyush/repository/13_8_otus/trees/97_otus.tree 
+alpha_diversity.py -i ../input/otu_table_stoica.biom -m chao1,observed_species,shannon,goods_coverage -o output/diversity_indices.txt 
+beta_diversity_through_plots.py -i ../input/otu_table_stoica.biom -o output/ -f -m  ../input/otu_stoica_mapping.txt -t
+/data/piyush/repository/13_8_otus/trees/97_otus.tree     make_2d_plots.py -i
+../beta_diversity_through_plots/output/unweighted_unifrac_pc.txt -m ../input/otu_stoica_mapping.txt -o output/          
+summarize_taxa_through_plots.py -i ../input/otu_table_stoica.biom -m ../input/otu_stoica_mapping.txt -o output/   -f       
+
+
+COMMAND#  biom summarize-table -i ../input/otu_table_stoica.biom  -o output/otu_table_stoica.biom.summary          ON#$(date)
+RESULT#  
+COMMAND#  alpha_rarefaction.py -i ../input/otu_table_stoica.biom -o output/  -f -m  ../input/otu_stoica_mapping.txt -p  alpha_params.txt -t /data/piyush/repository/13_8_otus/trees/97_otus.tree 
+RESULT#  
+COMMAND#  beta_diversity_through_plots.py -i ../input/otu_table_stoica.biom -o output/  -f -m  ../input/otu_stoica_mapping.txt -t /data/piyush/repository/13_8_otus/trees/97_otus.tree     
+RESULT#  
+COMMAND#  alpha_diversity.py -i ../input/otu_table_stoica.biom -m chao1,observed_species,shannon,goods_coverage -o output/diversity_indices.txt 
+RESULT#  
+COMMAND#  make_2d_plots.py -i ../beta_diversity_through_plots/output/unweighted_unifrac_pc.txt -m ../input/otu_stoica_mapping.txt -o output/          
+RESULT#  
+COMMAND#  summarize_taxa_through_plots.py -i ../input/otu_table_stoica.biom -m ../input/otu_stoica_mapping.txt -o output/   -f       
+RESULT#  
+#RAREFY THE STOICA BIOM TABLE TO 3000
+#single_rarefaction.py -i ../filter_samples_from_otu_table/output/otu_table_stoica.biom -o output/otu_table_stoica_3000.biom -d 3000       
+#cp output/otu_table_stoica_3000.biom  ../Project_stoica_rarefied/input/
+#cp ../Project_stoica/input/otu_stoica_mapping.txt  ../Project_stoica_rarefied/input/
+COMMAND#  alpha_rarefaction.py -i ../input/otu_table_stoica_3000.biom -o output/  -f -m  ../input/otu_stoica_mapping.txt -p  alpha_params.txt -t /data/piyush/repository/13_8_otus/trees/97_otus.tree 
+RESULT#  
+COMMAND#  beta_diversity_through_plots.py -i ../input/otu_table_stoica_3000.biom -o output/  -f -m  ../input/otu_stoica_mapping.txt -t /data/piyush/repository/13_8_otus/trees/97_otus.tree     
+RESULT#  
+COMMAND#  alpha_diversity.py -i ../input/otu_table_stoica_3000.biom -m chao1,observed_species,shannon,goods_coverage -o output/diversity_indices.txt 
+RESULT#  
+COMMAND#  make_2d_plots.py -i ../beta_diversity_through_plots/output/unweighted_unifrac_pc.txt -m ../input/otu_stoica_mapping.txt -o output/          
+RESULT#  
+COMMAND#  summarize_taxa_through_plots.py -i ../input/otu_table_stoica_3000.biom -m ../input/otu_stoica_mapping.txt -o output/   -f       
+RESULT#  
+STEP# validate_mapping_file COMMAND# validate_mapping_file.py -m ../input/map.txt -o output/ DATE# Tue Nov 18 11:29:26 CST 2014
+Result# Command success

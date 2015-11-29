@@ -1,0 +1,39 @@
+html {
+	-ms-overflow-x: hidden;
+}
+body {
+	-ms-overflow-x: hidden;
+}
+body {
+	padding-top: 70px;
+}
+footer {
+	padding: 30px 0px;
+}
+@media screen and (max-width:767px)
+{
+.row-offcanvas {
+	transition:0.25s ease-out; position: relative; -webkit-transition: all .25s ease-out; -o-transition: all .25s ease-out;
+}
+.row-offcanvas-right {
+	right: 0px;
+}
+.row-offcanvas-left {
+	left: 0px;
+}
+.row-offcanvas-right .sidebar-offcanvas {
+	right: -50%;
+}
+.row-offcanvas-left .sidebar-offcanvas {
+	left: -50%;
+}
+.active.row-offcanvas-right {
+	right: 50%;
+}
+.active.row-offcanvas-left {
+	left: 50%;
+}
+.sidebar-offcanvas {
+	top: 0px; width: 50%; position: absolute;
+}
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8'>
+	
+	<title>CSS Tabs</title>
+		
+    <style>
+        * { margin: 0; padding: 0; }
+        #page-wrap { width: 960px; margin: 100px auto; }
+        h1 { font: 36px Georgia, Serif; margin: 20px 0; }
+        .group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+        p { margin: 0 0 10px 0; }
+        
+        .tabs { list-style: none; }
+        .tabs li { display: inline; }
+        .tabs li a { color: black; float: left; display: block; padding: 4px 10px; margin-left: -1px; position: relative; left: 1px; background: white; text-decoration: none; }
+        .tabs li a:hover { background: #ccc; }
+        
+        
+        /* Generic styles & example one */
+        
+        .tabbed-area { margin: 0 0 120px 0; }
+        .box-wrap { position: relative; min-height: 250px; }
+        .tabbed-area div div { background: white; padding: 20px; min-height: 250px; position: absolute; top: -1px; left: 0; width: 100%; }
+        .tabbed-area div div, .tabs li a { border: 1px solid #ccc; }
+        #box-one:target, #box-two:target, #box-three:target,#box-four:target,#box-five:target,#box-six:target,
+        #box-seven:target,
+        #box-eight:target
+         { z-index: 1; }
+        
+        
+        
+       
+        
+        
+        /* Stuff for example seven - including conditionals below */
+        
+        #ie-test { position: relative; width: 100%; }
+        #boxLinks { list-style: none; overflow: hidden; }
+        #boxLinks li {  display: inline; }
+        #boxLinks li a { padding: 5px 10px; color: black; text-decoration: none; border: 1px solid #ccc; float: left; display: block; margin-left: -1px; position: relative; left: 1px; }
+        #boxLinks li a:hover { color: #fff; background: #000; }
+        #box { height: 250px; border: 1px solid #ccc; overflow: hidden; padding: 0px 30px 0px 30px; position: relative; top: -1px; }
+        .box { display: none; height: 250px; overflow: auto; display: block; position: relative; overflow-x: hidden; }
+        #box1:target, #box2:target, #box3:target ,#box4:target,#box5:target,#box6:target{ display: block; }
+        iframe{
+
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+            border: none;
+        }
+/*floater style for iframe*/
+.iframe{
+    height: 700px;
+
+}
+    </style>
+    
+    <!--[if IE]>
+    <style type="text/css">
+        .box { display: block; }
+        #box { overflow: hidden;position: relative; }
+        b { position: absolute; top: 0px; right: 0px; width:1px; height: 251px; overflow: hidden; text-indent: -9999px; }
+    </style>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+	<div >
+	
+        <div >
+
+            <h1 id="project_heading"> qiime project report</h1>
+            
+                      
+            
+            
+            <div class="tabbed-area">
+                
+                <ul class="tabs group">
+                   <li><a href="#box-one" id="init_tab">Project Details</a></li>
+                    <li><a href="#box-two">Project Commands</a></li>
+                    <li><a href="#box-three">Alpha Rarefaction</a></li>
+                    <!-- <li><a href="#box-four">Alpha Diversity</a></li> -->
+                    <!-- <li><a href="#box-five">Beta Diversity weighted</a></li> -->
+                    <li><a href="#box-six">2D Plots</a></li>
+                    <li><a href="#box-seven">Beta Diversity weighted</a></li>
+                    <li><a href="#box-eight">Beta Diversity Unweighted</a></li>
+                </ul>
+                
+                <div class="box-wrap">
+                
+                <div id="box-one">
+                    <!-- begin tab content -->
+                    <div class="iframe">
+                    <div style="text-align:left">
+<h2>Project Name : <span id="project_name"></span></h2>
+<br/>
+                    <h2>Received Files: <a href="input" target="_blank">Click to see</a></h2>
+                    <br/>
+                     <h2>Mapping/Sample Files: <a href="input" target="_blank">Click to see</a></h2>
+
+                     </div>
+                            <!-- <ul>
+                            <li>Project Name : <span id="project_name"></span></li>
+                            <li>Received Files : <a href="input" target="_blank">See all received files ></a> </li>
+                            <li>Mapping File : <a href="input/project_mapping.txt" target="_blank">See mapping file ></a> </li>
+                        </ul> -->
+                    </div>
+                <!-- end tab content -->
+                </div>
+                
+                <div id="box-two">
+                   <div class="iframe" >
+                                <iframe src="" id="commands"></iframe>
+                            </div>
+                
+                </div>
+                
+                <div id="box-three">
+                      <div class="iframe" >
+                                <iframe src="alpha_rarefaction/output/alpha_rarefaction_plots/rarefaction_plots.html"  ></iframe>
+                            </div>
+                </div>
+                 <!-- <div id="box-four">
+                     <div class="iframe" >
+                                <iframe src="alpha_rarefaction/output/alpha_rarefaction_plots/rarefaction_plots.html"  ></iframe>
+                            </div>
+                </div>
+                 <div id="box-five">
+                   <div class="iframe" >
+                                <iframe src="make_2d_plots/output/unweighted_unifrac_pc_2D_PCoA_plots.html" ></iframe>
+                            </div>
+                </div> -->
+                 <div id="box-six" >
+                    <!-- begin tab content -->
+                    <div class="floater"></div>
+                            <div class="iframe" >
+                                <iframe src="make_2d_plots/output/unweighted_unifrac_pc_2D_PCoA_plots.html"  ></iframe>
+                            </div>
+                <!-- end tab content -->
+                </div>
+                 <div id="box-seven" >
+                    <!-- begin tab content -->
+                    <div class="floater"></div>
+                            <div class="iframe" >
+                                <iframe src="beta_diversity_through_plots/output/weighted_unifrac_emperor_pcoa_plot/index.html" ></iframe>
+                            </div>
+                <!-- end tab content -->
+                </div>
+                 <div id="box-eight" >
+                    <!-- begin tab content -->
+                    <div class="floater"></div>
+                            <div class="iframe" >
+                                <iframe src="beta_diversity_through_plots/output/unweighted_unifrac_emperor_pcoa_plot/index.html" ></iframe>
+                            </div>
+                <!-- end tab content -->
+                </div>
+                
+                </div>
+            
+            </div>
+            
+            
+                
+		</div>
+			
+	</div>
+	
+ 
+</body>
+<script type="text/javascript">
+var loc = window.location.pathname.split('/');
+var prj_name = loc[loc.length -2 ];
+document.getElementById('project_heading').innerHTML = 'Project ' + prj_name + ' report';
+document.getElementById('project_name').innerHTML =  prj_name ;
+document.getElementById('commands').src = prj_name+'_commands.txt';
+document.getElementById('init_tab').click();
+    </script>
+
+
+
+</html>

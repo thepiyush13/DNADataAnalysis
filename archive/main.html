@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Bootstrap Gallery with Modal and Carousel</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+		<style>
+		.container{
+			width:100%;
+		}
+		#myTab li{
+			<!-- font-size : 9px; -->
+		}
+		.pre_result{
+			background-color:black;
+			color:white;
+		}
+		</style>
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+	
+	<header class="navbar navbar-default navbar-static-top" role="banner">
+  
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Qiime</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#">Scripts</a>
+        </li>
+        <li>
+          <a href="#">Output</a>
+        </li>
+        <li>
+          <a href="#">Help</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<div class="container">
+    <div class="row-fluid">
+        <div class="col-lg-12"><div class=""><h2> Qiime : Scripts  </h2> </div><hr></div>
+    </div>
+    
+    
+    
+  	<div class="row-fluid">
+	
+	
+<div class="col-md-3" style="
+    border-right: 1px solid rgba(0, 0, 0, 0.06);
+">
+<ul class="nav nav-tabs nav-pills  nav-stacked" id="myTab">
+                  <li class="active"><a href="#sectionA" data-toggle="tab"><i class='fa fa-chevron-circle-right'></i> Home</a></li>
+                  <li class=""><a href="#sectionB" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i>  validate mapping file</a></li>
+                  <li class=""><a href="#settings" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i>  convert fastaqual fastq</a></li>
+				  <li class=""><a href="#profile" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i>  extract barcodes</a></li>
+                  <li class=""><a href="#messages" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i>  split libraries fastq</a></li>
+                  <li class=""><a href="#settings" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i>  identify chimeric seqs</a></li>
+				  <li class=""><a href="#profile" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i>  filter fasta</a></li>
+                  <li class=""><a href="#messages" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i>  pick open reference otus</a></li>
+                  <li class=""><a href="#settings" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i>  pick closed reference otus</a></li>
+				  
+				 <li class=' '><a href='#alpha_rarefaction' data-toggle='tab'><i class='fa fa-chevron-circle-right'></i> alpha rarefaction</a></li>
+<li class=' '><a href='#alpha_diversity' data-toggle='tab'><i class='fa fa-chevron-circle-right'></i> alpha diversity</a></li>
+<li class=' '><a href='#beta_diversity_through_plots' data-toggle='tab'><i class='fa fa-chevron-circle-right'></i> beta diversity through plots</a></li>
+<li class=' '><a href='#make_2d_plots' data-toggle='tab'><i class='fa fa-chevron-circle-right'></i> make 2d plots</a></li>
+<li class=' '><a href='#summarize_taxa_through_plots' data-toggle='tab'><i class='fa fa-chevron-circle-right'></i> summarize taxa through plots</a></li>
+<li class=' '><a href='#compare_categories' data-toggle='tab'><i class='fa fa-chevron-circle-right'></i> compare categories</a></li>
+                </ul>
+</div>
+
+
+
+
+
+
+        <div class="col-md-9">
+                
+                
+                <div class="tab-content">
+                  <div class="tab-pane active" id="sectionA">
+                    <h4><i class="fa fa-chevron-circle-right icon-2x"></i> Create Project</h4>
+					<div class="row">
+	<div class="col-lg-12"><div class="form-inline well">
+        <div class="col-md-4">
+          	<input id="folderName" type="text" class="form-control" placeholder="Name of Project" style="">
+        </div>
+        <div class="col-md-6">
+        	<input  id="folderSource" type="text" class="form-control" placeholder="Folder of Project" style="">
+        </div>
+        
+        <button id="submit_sectionA" class="btn btn-primary">Start Project</button>
+      </div></div>
+</div>
+
+<div class="row">
+	<div class="col-lg-12"><div class="well"><pre class="pre_result"><div class="result">result</div></pre>
+	<button id="download" class="btn btn-primary btn-xs ">Download</button>
+	<!-- <button type="submit" class="btn btn-primary btn-xs ">Copy</button> -->
+	</div></div>
+</div>
+					
+					
+					
+                    
+                  </div>
+                  <div class="tab-pane" id="sectionB">
+                    <h4><i class="glyphicon glyphicon-comment"></i></h4>
+					<div class="row">
+	<div class="col-lg-12"><div class="form-inline well">
+        
+        <div class="col-md-6">
+        	<input  id="inputFile" type="text" class="form-control" placeholder="Mapping Input file" value="inputfile.fasta" style="">
+        </div>
+        
+        <button id="submit_sectionB" class="btn btn-primary">Validate Mapping File</button>
+      </div></div>
+</div>
+              <div class="row">
+	<div class="col-lg-12"><div class="well">
+	<ul class="nav nav-tabs" >
+                  <li class="active"><a href="#sectionB_cmd" data-toggle="tab">Quick Command</a></li>
+                  <li class=""><a href="#sectionB_script" data-toggle="tab">Full shell script</li>
+                  	
+                </ul>
+				<div id="myTabContent" class="tab-content">
+				<div class="tab-pane active" id="sectionB_cmd"><pre class="pre_result"><div class="result">result</div></pre> </div>
+				<div class="tab-pane" id="sectionB_script"><pre class="pre_result"><div class="result">result2</div></pre> </div>
+              </div>
+				
+	
+	<!-- <button id="download" class="btn btn-primary btn-xs ">Download</button> -->
+	<!-- <button type="submit" class="btn btn-primary btn-xs ">Copy</button> -->
+	</div></div>
+</div>     
+                  </div>
+                  
+                </div>
+              	</div>
+    </div>
+  	<div class="row">
+	<!-- <hr/> -->
+        <!-- <div class="col-xs-12"><div class="well"><p>3 xs cols</p></div></div> -->
+        
+    </div>
+  	<hr>
+  	<a href="">Qiime</a>
+</div>
+        
+    
+    
+  	
+</div>
+  
+  
+  </div>
+</div>
+
+	<!-- script references -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+		<script src="js/my.js"></script>
+	</body>
+</html>

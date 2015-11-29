@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078) -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="IE=11.0000" http-equiv="X-UA-Compatible"> 
+
+<meta charset="utf-8">     
+<meta http-equiv="X-UA-Compatible" content="IE=edge">     
+<meta name="viewport" content="width=device-width, initial-scale=1">     
+<meta name="description" content="">     
+<title>Off Canvas Template for Bootstrap</title>     <!-- Bootstrap core CSS --> 
+<link href="run_files/bootstrap.min.css" rel="stylesheet">     <!-- Custom styles for this template --> 
+<link href="run_files/offcanvas.css" rel="stylesheet">     <!-- Just for debugging purposes. Don't actually copy these 2 lines! --> 
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]--> 
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<style type="text/css">
+.pre_result{
+      background-color:black;
+      color:white;
+      overflow-wrap: break-word;
+    }
+    </style>
+<script src="./run_files/ie-emulation-modes-warning.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]--> 
+
+      <meta name="GENERATOR" content="MSHTML 11.00.9600.17344"></head>   
+      <body><nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header"><button class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" type="button" data-toggle="collapse" data-target="#navbar"><span class="sr-only">Toggle navigation</span>             
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> 
+            <a class="navbar-brand" href="http://getbootstrap.com/examples/offcanvas/#">Qiime Project</a>         </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li class=""><a href="http://getbootstrap.com/examples/offcanvas/#">Home</a></li>
+                <li><a href="http://getbootstrap.com/examples/offcanvas/#about">About</a></li>
+                <li><a href="http://getbootstrap.com/examples/offcanvas/#contact">Contact</a></li></ul></div><!-- /.nav-collapse --> 
+              </div><!-- /.container -->     </nav><!-- /.navbar -->     
+              <div class="container">
+                <div class="row row-offcanvas row-offcanvas-right">
+                  <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                    <ul class="nav nav-tabs nav-pills  nav-stacked" id="myTab">
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='create_project' ><i class="fa fa-chevron-circle-right"></i>  Create project</a> </li>
+					   <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='biom_summarize-table' ><i class="fa fa-chevron-circle-right"></i>  biom summarize-table</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='validate_mapping_file' ><i class="fa fa-chevron-circle-right"></i>  validate mapping file</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='convert_fastaqual_fastq' ><i class="fa fa-chevron-circle-right"></i>  convert fastaqual fastq</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='extract_barcodes' ><i class="fa fa-chevron-circle-right"></i>  extract barcodes</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='split_libraries_fastq' ><i class="fa fa-chevron-circle-right"></i>  split libraries fastq</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='identify_chimeric_seqs' ><i class="fa fa-chevron-circle-right"></i>  identify chimeric seqs</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='filter_fasta' ><i class="fa fa-chevron-circle-right"></i>  filter fasta</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='pick_open_reference_otus' ><i class="fa fa-chevron-circle-right"></i>  pick open reference otus</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='pick_closed_reference_otus' ><i class="fa fa-chevron-circle-right"></i>  pick closed reference otus</a> </li> 
+                     
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='single_rarefaction' ><i class="fa fa-chevron-circle-right"></i>  single rarefaction</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='sort_otu_table' ><i class="fa fa-chevron-circle-right"></i>  sort otu table</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='filter_samples_from_otu_table' ><i class="fa fa-chevron-circle-right"></i>  filter samples from otu table</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='alpha_rarefaction' ><i class="fa fa-chevron-circle-right"></i>  alpha rarefaction</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='alpha_diversity' ><i class="fa fa-chevron-circle-right"></i>  alpha diversity</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='beta_diversity_through_plots' ><i class="fa fa-chevron-circle-right"></i>  beta diversity through plots</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='make_2d_plots' ><i class="fa fa-chevron-circle-right"></i>  make 2d plots</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='summarize_taxa_through_plots' ><i class="fa fa-chevron-circle-right"></i>  summarize taxa through plots</a> </li> 
+                      <li class=''> <a href='#' data-toggle='tab' class='navLinks' id='compare_categories' ><i class="fa fa-chevron-circle-right"></i>  compare categories</a> </li> 
+                    </ul></div><div class="col-xs-12 col-sm-9">
+                    <p class="pull-right visible-xs"><button class="btn btn-primary btn-xs" type="button" data-toggle="offcanvas">Toggle nav</button>           </p>
+                    <div class="well">
+                      <h3>Input</h3><hr/>
+                      <!-- BEGIN INPUT BIOXES -->
+                      <div class='div_script_inputs div_create_project'><br/> <label for='create_project_name'  />Project Name</label><input type='text' id='create_project_name' value='Project_xyz' class='script_inputs form-control' /> 
+                        <br/> <label for='create_project_path'  />Project Path</label><input type='text' id='create_project_path' value='/data/username/' class='script_inputs form-control' /></div> 
+
+                      <div class='div_script_inputs div_validate_mapping_file'><br/> <label for='validate_mapping_file-m'  />Mapping file </label><input type='text' id='validate_mapping_file-m' value='../input/Project_stoica_open_mapping.txt' class='script_inputs form-control' /> </div> 
+					   
+<div class='div_script_inputs div_validate_mapping_file'><br/> <label for='validate_mapping_file-o'  /> output folder/file </label><input type='text' id='validate_mapping_file-o' value='output/' class='script_inputs form-control' /> </div> 
+
+<div class='div_script_inputs div_biom_summarize-table'><br/> <label for='biom_summarize-table-i'  />Input file </label><input type='text' id='biom_summarize-table-i' value='../input/otu_table_combined_mc2_w_tax.biom' class='script_inputs form-control' /> 
+             
+             <br/> <label for='biom_summarize-table-o'  />Output file </label><input type='text' id='biom_summarize-table-o' value='output/otu_table_combined_mc2_w_tax.biom.summary' class='script_inputs form-control' /> 
+             </div> 
+
+
+<div class='div_script_inputs div_convert_fastaqual_fastq'><br/> <label for='convert_fastaqual_fastq-q'  />quality file </label><input type='text' id='convert_fastaqual_fastq-q' value='input/080714JS530Filluminaull.qual' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_convert_fastaqual_fastq'><br/> <label for='convert_fastaqual_fastq-o'  />output folder/file </label><input type='text' id='convert_fastaqual_fastq-o' value='output/' class='script_inputs form-control' /> </div> 
+
+
+<div class='div_script_inputs div_extract_barcodes'><br/> <label for='extract_barcodes-f'  />Input fastq file(R1)</label><input type='text' id='extract_barcodes-f' value='input/inseqs.fastq' class='script_inputs form-control' /> </div>
+                      <div class='div_script_inputs div_extract_barcodes'><br/> <label for='extract_barcodes-c'  />extract_barcodes-c</label><input type='text' id='extract_barcodes-c' value='barcode_single_end' class='script_inputs form-control' /> </div> 
+
+<div class='div_script_inputs div_extract_barcodes'><br/> <label for='extract_barcodes--bc1_len'  />extract_barcodes--bc1_len</label><input type='text' id='extract_barcodes--bc1_len' value='8' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_extract_barcodes'><br/> <label for='extract_barcodes-o'  /> output  folder/file </label><input type='text' id='extract_barcodes-o' value='output' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_split_libraries_fastq'><br/> <label for='split_libraries_fastq-i'  /> input sequence file </label><input type='text' id='split_libraries_fastq-i' value='../extract_barcodes/output/reads.fastq' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_split_libraries_fastq'><br/> <label for='split_libraries_fastq-b'  />split_libraries_fastq barcodes file </label><input type='text' id='split_libraries_fastq-b' value='../extract_barcodes/output/barcodes.fastq' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_split_libraries_fastq'><br/> <label for='split_libraries_fastq-m'  /> Mapping file </label><input type='text' id='split_libraries_fastq-m' value='../input/mapping.txt' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_split_libraries_fastq'><br/> <label for='split_libraries_fastq--barcode_type'  />split_libraries_fastq--barcode_type</label><input type='text' id='split_libraries_fastq--barcode_type' value='8' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_split_libraries_fastq'><br/> <label for='split_libraries_fastq-o'  /> output  folder/file </label><input type='text' id='split_libraries_fastq-o' value='output/' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_identify_chimeric_seqs'><br/> <label for='identify_chimeric_seqs-i'  /> input sequence file </label><input type='text' id='identify_chimeric_seqs-i' value='../split_libraries_fastq/output/seqs.fna' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_identify_chimeric_seqs'><br/> <label for='identify_chimeric_seqs-m'  /> Mapping file </label><input type='text' id='identify_chimeric_seqs-m' value='usearch61' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_identify_chimeric_seqs'><br/> <label for='identify_chimeric_seqs-o'  /> output  folder/file </label><input type='text' id='identify_chimeric_seqs-o' value='output/' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_identify_chimeric_seqs'><br/> <label for='identify_chimeric_seqs-r'  />identify_chimeric_seqs-r</label><input type='text' id='identify_chimeric_seqs-r' value='../input/gg_13_8_otus/rep_set/97_otus.fasta' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_filter_fasta'><br/> <label for='filter_fasta-s'  />filter_fasta-s</label><input type='text' id='filter_fasta-s' value='../identify_chimeric_seqs/output/chimeras.txt' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_filter_fasta'><br/> <label for='filter_fasta-o'  /> output  folder/file </label><input type='text' id='filter_fasta-o' value='filter_fasta_output.fna' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_pick_open_reference_otus'><br/> <label for='pick_open_reference_otus-i'  /> input sequence file </label><input type='text' id='pick_open_reference_otus-i' value='../filter_fasta/filter_fasta_output.fna' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_pick_open_reference_otus'><br/> <label for='pick_open_reference_otus-r'  />pick_open_reference_otus-r</label><input type='text' id='pick_open_reference_otus-r' value='../input/gg_13_8_otus/rep_set/97_otus.fasta' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_pick_open_reference_otus'><br/> <label for='pick_open_reference_otus-o'  /> output  folder/file </label><input type='text' id='pick_open_reference_otus-o' value='output/' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_pick_closed_reference_otus'><br/> <label for='pick_closed_reference_otus-i'  /> input sequence file </label><input type='text' id='pick_closed_reference_otus-i' value='../split_libraries_fastq/output/seqs.fna' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_pick_closed_reference_otus'><br/> <label for='pick_closed_reference_otus-t'  /> taxonomy/tree file </label><input type='text' id='pick_closed_reference_otus-t' value='../input/gg_13_5_otus/taxonomy/97_otu_taxonomy.txt' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_pick_closed_reference_otus'><br/> <label for='pick_closed_reference_otus-r'  />pick_closed_reference_otus-r</label><input type='text' id='pick_closed_reference_otus-r' value='../input/gg_13_5_otus/rep_set/97_otus.fasta' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_pick_closed_reference_otus'><br/> <label for='pick_closed_reference_otus-o'  /> output  folder/file </label><input type='text' id='pick_closed_reference_otus-o' value='output/' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_single_rarefaction'><br/> <label for='single_rarefaction-i'  /> input sequence file </label><input type='text' id='single_rarefaction-i' value='../filter_samples_from_otu_table/output/otu_table_stoica.biom' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_single_rarefaction'><br/> <label for='single_rarefaction-o'  /> output  folder/file </label><input type='text' id='single_rarefaction-o' value='output/otu_table_stoica_3000.biom' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_single_rarefaction'><br/> <label for='single_rarefaction-d'  />single_rarefaction-d</label><input type='text' id='single_rarefaction-d' value='3000' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_sort_otu_table'><br/> <label for='sort_otu_table-i'  /> input sequence file </label><input type='text' id='sort_otu_table-i' value='../single_rarefaction/output/otu_table_3741.biom' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_sort_otu_table'><br/> <label for='sort_otu_table-o'  /> output  folder/file </label><input type='text' id='sort_otu_table-o' value='output/otu_table_3741_sorted.biom' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_filter_samples_from_otu_table'><br/> <label for='filter_samples_from_otu_table-i'  /> input sequence file </label><input type='text' id='filter_samples_from_otu_table-i' value='../input/otu_table_combined_mc2_w_tax.biom' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_filter_samples_from_otu_table'><br/> <label for='filter_samples_from_otu_table-o'  /> output  folder/file </label><input type='text' id='filter_samples_from_otu_table-o' value='output/otu_table_sivoy2.biom' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_filter_samples_from_otu_table'><br/> <label for='filter_samples_from_otu_table-m'  /> Mapping file </label><input type='text' id='filter_samples_from_otu_table-m' value='../input/map.txt' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_filter_samples_from_otu_table'><br/> <label for='filter_samples_from_otu_table-s'  />filter_samples_from_otu_table-s</label><input type='text' id='filter_samples_from_otu_table-s' value='"Project:stoica"' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_filter_samples_from_otu_table'><br/> <label for='filter_samples_from_otu_table--output_mapping_fp'  />filter_samples_from_otu_table--output_mapping_fp</label><input type='text' id='filter_samples_from_otu_table--output_mapping_fp' value='otu_table_stoica_mapping.biom' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_alpha_rarefaction'><br/> <label for='alpha_rarefaction-i'  /> input sequence file </label><input type='text' id='alpha_rarefaction-i' value='../input/otu_table_mc2_w_tax.biom' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_alpha_rarefaction'><br/> <label for='alpha_rarefaction-o'  /> output  folder/file </label><input type='text' id='alpha_rarefaction-o' value='output/' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_alpha_rarefaction'><br/> <label for='alpha_rarefaction-m'  /> Mapping file </label><input type='text' id='alpha_rarefaction-m' value='../input/final_otu_map_mc2.txt' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_alpha_rarefaction'><br/> <label for='alpha_rarefaction-p'  />alpha_rarefaction-p</label><input type='text' id='alpha_rarefaction-p' value='alpha_params.txt' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_alpha_rarefaction'><br/> <label for='alpha_rarefaction-t'  /> taxonomy/tree file </label><input type='text' id='alpha_rarefaction-t' value='/data/piyush/repository/13_8_otus/trees/97_otus.tree' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_alpha_diversity'><br/> <label for='alpha_diversity-i'  /> input sequence file </label><input type='text' id='alpha_diversity-i' value='../input/otu_table_mc2_w_tax.biom' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_alpha_diversity'><br/> <label for='alpha_diversity-m'  /> Mapping file </label><input type='text' id='alpha_diversity-m' value='chao1,observed_species,shannon,goods_coverage' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_alpha_diversity'><br/> <label for='alpha_diversity-o'  /> output  folder/file </label><input type='text' id='alpha_diversity-o' value='output/diversity_indices.txt' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_beta_diversity_through_plots'><br/> <label for='beta_diversity_through_plots-i'  /> input sequence file </label><input type='text' id='beta_diversity_through_plots-i' value='../input/otu_table_mc2_w_tax.biom' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_beta_diversity_through_plots'><br/> <label for='beta_diversity_through_plots-o'  /> output  folder/file </label><input type='text' id='beta_diversity_through_plots-o' value='output/' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_beta_diversity_through_plots'><br/> <label for='beta_diversity_through_plots-m'  /> Mapping file </label><input type='text' id='beta_diversity_through_plots-m' value='../input/final_otu_map_mc2.txt' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_beta_diversity_through_plots'><br/> <label for='beta_diversity_through_plots-t'  /> taxonomy/tree file </label><input type='text' id='beta_diversity_through_plots-t' value='/data/piyush/repository/13_8_otus/trees/97_otus.tree' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_make_2d_plots'><br/> <label for='make_2d_plots-i'  /> input sequence file </label><input type='text' id='make_2d_plots-i' value='../beta_diversity_through_plots/output/unweighted_unifrac_pc.txt' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_make_2d_plots'><br/> <label for='make_2d_plots-m'  /> Mapping file </label><input type='text' id='make_2d_plots-m' value='../input/final_otu_map_mc2.txt' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_make_2d_plots'><br/> <label for='make_2d_plots-o'  /> output  folder/file </label><input type='text' id='make_2d_plots-o' value='output/' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_summarize_taxa_through_plots'><br/> <label for='summarize_taxa_through_plots-i'  /> input sequence file </label><input type='text' id='summarize_taxa_through_plots-i' value='../input/otu_table_mc2_w_tax.biom' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_summarize_taxa_through_plots'><br/> <label for='summarize_taxa_through_plots-m'  /> Mapping file </label><input type='text' id='summarize_taxa_through_plots-m' value='../input/final_otu_map_mc2.txt' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_summarize_taxa_through_plots'><br/> <label for='summarize_taxa_through_plots-o'  /> output  folder/file </label><input type='text' id='summarize_taxa_through_plots-o' value='output/' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_compare_categories'><br/> <label for='compare_categories--method'  />compare_categories--method</label><input type='text' id='compare_categories--method' value='anosim' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_compare_categories'><br/> <label for='compare_categories-i'  /> input sequence file </label><input type='text' id='compare_categories-i' value='../beta_diversity_through_plots/output/weighted_unifrac_dm.txt' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_compare_categories'><br/> <label for='compare_categories-m'  /> Mapping file </label><input type='text' id='compare_categories-m' value='../input/final_otu_map_mc2.txt' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_compare_categories'><br/> <label for='compare_categories-c'  />compare_categories-c</label><input type='text' id='compare_categories-c' value='Group' class='script_inputs form-control' /> </div> 
+<div class='div_script_inputs div_compare_categories'><br/> <label for='compare_categories-o'  /> output  folder/file </label><input type='text' id='compare_categories-o' value='output_weighted_group/' class='script_inputs form-control' /> </div> 
+                     <!-- END INPUT BOXES -->
+                     <hr/>
+                     <div class="text-right">
+                     <button id="generate_script" class="btn btn-primary ">Generate Command</button>
+                   </div>
+                    </div>
+                    <div class="well">
+					<h3>Result</h3><hr/>
+                      <h4>Shell Command</h4>
+                      <pre class="pre_result"><div id="script_result">result</div></pre>
+					  
+					  <h4>Quick Command</h4>
+                      <pre class="pre_result"><div id="script_quick_result">result</div></pre>
+                    </div><!--/row-->    
+                  </div><!--/.col-xs-12.col-sm-9-->         
+                  <!--/.sidebar-offcanvas--> 
+                </div><!--/row-->       
+                <hr>
+                <footer>
+<p>© Company 2014</p></footer></div><!--/.container-->     <!-- Bootstrap core JavaScript
+================================================== --> 
+<!-- Placed at the end of the document so the pages load faster -->     
+<script src="run_files/jquery.min.js"></script>
+
+<script src="run_files/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->     
+<script src="run_files/ie10-viewport-bug-workaround.js"></script>
+
+<script src="run_files/offcanvas.js"></script>
+<script src="run_files/my.js"></script>
+
+
+<script >
+$(document).ready(function(){
+  $('.div_script_inputs').hide();
+/* section home */
+$('.navLinks').click(function(){
+  $('.div_script_inputs').hide();
+  var id = this.id;
+  div_class = 'div_'+id;
+  $('.'+div_class).show();
+
+});
+$('#generate_script').click(function(){
+  init_data();
+  var script = '';
+  var id = $('.active a').attr('id');
+  var cmd = inputData[id];
+  var base_path = inputData["project_details"].project_path + inputData["project_details"].project_name
+  if(id=="create_project"){
+    script = cmd
+  }    
+  else{
+    //create step folder from id and cd there
+    //run command
+    //step out of the folder 
+    var step_path = base_path+"/"+id
+    script = "cd "+base_path+" && mkdir -p "+id+"/output && cd "+id+" && CMD='"+cmd+"' && echo STEP# "+id+" COMMAND# $CMD DATE# `date`  >> ../"+getValue('create_project_name')+"_commands.txt"+" && echo $CMD >> ../log.txt && $CMD &>> ../log.txt && echo 'Result# Command success' ; cd ..";
+  }
+  
+  $('#script_result').html(script);
+  $('#script_quick_result').html(cmd);
+
+});
+
+
+})
+
+</script>
+
+</body></html>

@@ -1,0 +1,2 @@
+validate_mapping_file.py -m ../input/map.txt -o output/
+No errors or warnings were found in mapping file.
